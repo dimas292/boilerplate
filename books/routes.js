@@ -12,7 +12,7 @@ const route = (app) => {
   app.route('/books/:id')
     .get(async(req, res) => {
       try {
-        await getBookByID(req, res)
+        getBookByID(req, res)
       } catch (error) {
         res.status(400).send({error : 'Buku tidak ditemukan'})
       }
